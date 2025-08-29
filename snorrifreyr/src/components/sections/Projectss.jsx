@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import{LazyYouTube} from "./vidioplayer";
+
 
 export const Projects =()=>{
     return <section id="Projects" className="min-h-screen bg-[#0a0a0b] text-zinc-200 selection:bg-lime-400/30 selection:text-zinc-50"> 
@@ -41,7 +41,7 @@ export const Projects =()=>{
           <p className="mt-4 max-w-prose text-zinc-400">
             I had the absolute pleasure to take part in Ungir Frumkvöðlar, a competition where you learn exactly what it’s like to make a startup from the first idea to execution, including the business and legal side. We founded SR‑Tuning — an online e‑commerce site for custom CNC‑machined motorcycle parts. As the programmer, I built the website using TypeScript, React, and more, integrating PayPal, Clerk, EmailJS, and other services. The AI started as a simple ChatGPT chatbot, but evolved into a complex multi‑agent system connected to a massive vector database of repair manuals, outperforming all AI models at the time for motorcycle torque specs. We won “Most Innovative Technical Company of 2025”.
           </p>
-          <LazyYouTube />
+          <a href="https://www.youtube.com/watch?v=jR3B0Wee3dY" className="ml-4 mt-4 group inline-flex items-center gap-2 rounded-2xl border border-sky-400/40 bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:border-sky-400/70 hover:shadow-[0_0_25px_-6px_rgba(190,242,100,0.65)">Youtube</a>
           
           
 
