@@ -22,7 +22,7 @@ export const About =()=>{
             about me 
           </h1>
           <p className="mt-4 max-w-prose text-zinc-400">
-           fult af uplisingum um mig
+           Snorri Freyr Harðarson heiti ég og ég var fædur 2007 leingi hef eg hafið mikin ahuga a tölvum og foritun þeira eg birjaði i tölvuleikjar foritun nuna i dag er eg aðanlega að hann firir vefin og gera ganargruna og meira einfalda hluti.
           </p>
           
         </motion.div>

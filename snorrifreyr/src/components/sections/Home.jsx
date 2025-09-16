@@ -12,7 +12,7 @@ export const Home =()=>{
         <div className="absolute bottom-[-18rem] right-[-10rem] h-[26rem] w-[26rem] rounded-full blur-3xl opacity-20 bg-lime-400/70" />
 
    
-        <div className="absolute top-1/3 -left-24 h-60 w-60 rounded-full blur-3xl opacity-25 bg-sky-400/100" />
+        <div className="absolute top-1/3 -left-24 h-60 w-60 rounded-full blur-3xl opacity-25 bg-sky-400/100 " />
       </div>
 
 
