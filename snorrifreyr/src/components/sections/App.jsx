@@ -8,6 +8,7 @@ import { Mobilemenu } from "./mobilemenu";
 import { Home } from "./Home";
 import { About } from "./ME";
 import { Projects } from "./Projectss";
+import { Blackjack } from "./blackjack";
 
 
 function App() {
@@ -23,13 +24,12 @@ function App() {
     const section = document.getElementById(menuid);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
-      // close mobile menu after navigating
+  
       Setismenuopen(false);
     }
   }, [menuid]);
 
-  // optional: global CSS smooth scrolling fallback (keeps wheel/anchor smooth)
-  // You can also put `html { scroll-behavior: smooth; }` in your CSS.
+
 
   return (
     <>
@@ -40,7 +40,7 @@ function App() {
           isLoaded ? "opacity-100" : "opacity-0"
         } bg-black text-gray-100`}
       >
-        {/* Pass setMenuid so your nav can call setMenuid('about') etc. */}
+
         <Navbar
           menuopen={menuopen}
           Setismenuopen={Setismenuopen}
@@ -52,7 +52,7 @@ function App() {
           setMenuid={setMenuid}
         />
 
-        {/* If you have a fixed navbar, keep sections from hiding under it */}
+
         <section
           id="home"
           className="min-h-screen"
@@ -74,6 +74,8 @@ function App() {
           style={{ scrollMarginTop: "80px" }}
         >
           <Projects />
+          <Blackjack/>
+
         </section>
 
        
