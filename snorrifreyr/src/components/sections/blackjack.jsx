@@ -8,16 +8,18 @@ function randomIntFromInterval(min, max) {
 export const Blackjack = () => {
   const [cards, setCards] = useState([]); // Array to store card values
   const [money, setMoney] = useState(100); // Example: Initialize money with 100
-
+  const [cardsSum,setCardsSum]=useState(0);
   const handleHit = () => {
-    const newCard = randomIntFromInterval(1, 13); // Generate a random card value
-    setCards([...cards, newCard]); // Append the new card to the array
+    const newCard = randomIntFromInterval(1, 13); 
+    setCards([...cards, newCard]); 
+    setCardsSum(cardsSum+newCard)
   };
 
   return (
     <section id="Blackjack" className="min-h-screen bg-[#0a0a0b] text-zinc-200 selection:bg-lime-400/30 selection:text-zinc-50">
       <h1>Blackjack</h1>
       <h3>Card values: {cards.join(", ")}</h3> {/* Display all card values */}
+      <h3>card total ${cardsSum}</h3>
       <h3>Money: ${money}</h3> {/* Display money */}
 
       <input
