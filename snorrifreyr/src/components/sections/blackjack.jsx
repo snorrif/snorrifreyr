@@ -19,7 +19,7 @@ export const Blackjack = () => {
     if (newSum > 21) {
       loss(); 
     }
-    if (newSum>17){
+    if (newSum>17 &newSum<=21){
       win();
     }
   };
