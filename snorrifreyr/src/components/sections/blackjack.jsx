@@ -10,10 +10,14 @@ export const Blackjack = () => {
   const [money, setMoney] = useState(100); // Example: Initialize money with 100
   const [cardsSum,setCardsSum]=useState(0);
   const handleHit = () => {
-    const newCard = randomIntFromInterval(1, 13); 
-    setCards([...cards, newCard]); 
-    setCardsSum(cardsSum+newCard)
-    if (cardsSum>21){loss}
+    const newCard = randomIntFromInterval(1, 13);
+    const newSum = cardsSum + newCard; // Calculate the new sum
+    setCards([...cards, newCard]);
+    setCardsSum(newSum);
+
+    if (newSum > 21) {
+      loss(); // Invoke the loss function
+    }
   };
   const loss = () => {
     setCards([])
