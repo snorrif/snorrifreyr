@@ -9,6 +9,7 @@ export const Blackjack = () => {
   const [cards, setCards] = useState([]); // Array to store card values
   const [money, setMoney] = useState(100); // Example: Initialize money with 100
   const [cardsSum,setCardsSum]=useState(0);
+  const [naraitor,setnaraitor]=useState("hi")
   const handleHit = () => {
     const newCard = randomIntFromInterval(1, 13);
     const newSum = cardsSum + newCard; // Calculate the new sum
@@ -16,13 +17,23 @@ export const Blackjack = () => {
     setCardsSum(newSum);
 
     if (newSum > 21) {
-      loss(); // Invoke the loss function
+      loss(); 
+    }
+    if (newSum>17){
+      win();
     }
   };
   const loss = () => {
     setCards([])
     setCardsSum(0)
     setMoney(money-25)
+    setnaraitor("u lose")
+  };
+  const win = () => {
+    setCards([])
+    setCardsSum(0)
+    setMoney(money+25)
+    setnaraitor("concratulations")
   };
 
   return (
@@ -31,6 +42,7 @@ export const Blackjack = () => {
       <h3>Card values: {cards.join(", ")}</h3> {/* Display all card values */}
       <h3>card total {cardsSum}</h3>
       <h3>Money: ${money}</h3> {/* Display money */}
+      <h2>naritor;{naraitor}</h2>
 
       <input
         type="button"
