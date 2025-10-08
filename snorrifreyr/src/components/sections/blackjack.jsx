@@ -13,13 +13,14 @@ export const Blackjack = () => {
     const newCard = randomIntFromInterval(1, 13); 
     setCards([...cards, newCard]); 
     setCardsSum(cardsSum+newCard)
+    if (cardsSum>21){setMoney(money)-25}
   };
 
   return (
     <section id="Blackjack" className="min-h-screen bg-[#0a0a0b] text-zinc-200 selection:bg-lime-400/30 selection:text-zinc-50">
       <h1>Blackjack</h1>
       <h3>Card values: {cards.join(", ")}</h3> {/* Display all card values */}
-      <h3>card total ${cardsSum}</h3>
+      <h3>card total {cardsSum}</h3>
       <h3>Money: ${money}</h3> {/* Display money */}
 
       <input
