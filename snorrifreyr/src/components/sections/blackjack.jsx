@@ -13,7 +13,12 @@ export const Blackjack = () => {
     const newCard = randomIntFromInterval(1, 13); 
     setCards([...cards, newCard]); 
     setCardsSum(cardsSum+newCard)
-    if (cardsSum>21){setMoney(money-25)}
+    if (cardsSum>21){loss}
+  };
+  const loss = () => {
+    setCards([])
+    setCardsSum(0)
+    setMoney(money-25)
   };
 
   return (
