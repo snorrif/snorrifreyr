@@ -6,10 +6,12 @@ import { useState } from "react";
 }
 
 const rndInt = randomIntFromInterval(1, 13);
-console.log(rndInt);
-const [cards,setcards] =useState(0);
+
+
 
 export const Blackjack =()=>{
+  const [cards,setcards] =useState([]);
+
     return <section id="Blackjack" className="min-h-screen bg-[#0a0a0b] text-zinc-200 selection:bg-lime-400/30 selection:text-zinc-50">
         con
      
