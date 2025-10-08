@@ -19,11 +19,11 @@ export const Blackjack =()=>{
      
 
     <h1>Blackjack</h1>
-    <h3>card value [card]</h3>
+    <h3>card value {card}</h3>
     <h4>money=[money]</h4>
 
 
-    <input type="button" value="hit" onClick={handlehit }/>
+    <input type="button" value="hit" onClick={handlehit } className="ml-4 mt-4 group inline-flex items-center gap-2 rounded-2xl border border-sky-400/40 bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:border-sky-400/70 hover:shadow-[0_0_25px_-6px_rgba(190,242,100,0.65)"/>
     <button>stand</button>
     
     =
