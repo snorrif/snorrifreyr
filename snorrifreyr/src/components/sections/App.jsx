@@ -74,7 +74,7 @@ function App() {
           style={{ scrollMarginTop: "80px" }}
         >
           <Projects />
-          <Blackjack/>
+          
 
         </section>
 

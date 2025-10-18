@@ -1,7 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { Blackjack } from "./blackjack";
 
 
 export const Projects =()=>{
+  const[pokerstart , setpokerstart]=useState(false);
     return <section id="Projects" className="min-h-screen bg-[#0a0a0b] text-zinc-200 selection:bg-lime-400/30 selection:text-zinc-50"> 
     
       
@@ -44,6 +47,23 @@ export const Projects =()=>{
           <a href="https://www.youtube.com/watch?v=jR3B0Wee3dY" className="ml-4 mt-4 group inline-flex items-center gap-2 rounded-2xl border border-sky-400/40 bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:border-sky-400/70 hover:shadow-[0_0_25px_-6px_rgba(190,242,100,0.65)">Youtube</a>
           
           
+
+          
+        </motion.div>
+      </section>
+       <section className="flex flex-col mx-auto mt items-center group  rounded-3xl max-w-4xl border border-white/10 bg-zinc-950 p-5 ">
+        <motion.div initial= {{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 ,delay: 3.5 }}>
+          <h1 className="text-4xl  font-mono tracking-tight text-zinc-50  md:text-6xl">
+            Blackjack                 
+          </h1>
+          <p className="mt-4 max-w-prose text-zinc-400">
+            this is a blacjack made in typscript 
+          </p>
+         <button type="button"onClick={() => setpokerstart(true)} className="flex mx-auto mt border-b-amber-50 bg-emerald-400">start</button> 
+          
+          if (pokerstart) {<Blackjack/>
+            
+          }
 
           
         </motion.div>

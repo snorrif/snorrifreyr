@@ -9,7 +9,11 @@ export const Blackjack = () => {
   const [cards, setCards] = useState([]); // Array to store card values
   const [money, setMoney] = useState(100); // Example: Initialize money with 100
   const [cardsSum,setCardsSum]=useState(0);
+  const [ecards, seteCards] = useState([]); // Array to store card values
+   const [emoney, seteMoney] = useState(100); // Example: Initialize money with 100
+  const [ecardsSum,seteCardsSum]=useState(0);
   const [naraitor,setnaraitor]=useState("hi")
+
   const handleHit = () => {
     const newCard = randomIntFromInterval(1, 13);
     const newSum = cardsSum + newCard; // Calculate the new sum
